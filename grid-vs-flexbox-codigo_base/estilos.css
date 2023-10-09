@@ -16,7 +16,10 @@ body {
 	margin: auto;
 	padding: 40px 0;
 
-	
+	/* Paso1: sino pongo estan las fotos una denajo de otra */
+	display: flex;
+	/* Separacion entre cada elemento */
+	gap: 20px;
 }
 
 .titulo {
@@ -25,7 +28,15 @@ body {
 }
 
 .contenedor-conciertos {
-	
+	width: 70%;
+
+	/* Estaban en vertical y se ponen horizontal */
+	display: flex;
+	/* Sino caben se ponen abajo */
+	flex-wrap: wrap;
+
+	/* Damosesacio entre cajas */
+	gap: 20px;
 }
 
 .card {
@@ -38,7 +49,7 @@ body {
 	background-size: cover;
 	background-position: center center;
 
-	
+	width: calc(33.33%- 20px);
 }
 
 .card .textos {
@@ -54,7 +65,8 @@ body {
 	background-size: cover;
 	background-position: center center;
 
-
+	/* Arerglando espacio de las dos cajas */
+	width: 30%;
 }
 
 .banner ul {
