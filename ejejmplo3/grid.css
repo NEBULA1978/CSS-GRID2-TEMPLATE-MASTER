@@ -1,9 +1,6 @@
 /* Importa la fuente 'Public Sans' desde Google Fonts y la aplica a todo el documento */
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
 
-/* Para lograr que los productos se muestren uno al lado del otro en pantallas más grandes y uno debajo del otro en pantallas más pequeñas,
-puedes hacer algunos ajustes en tu CSS. Aquí está el código CSS modificado: */
-
 /* Estilos globales para resetear márgenes, rellenos y configuración de caja */
 * {
   box-sizing: border-box;
@@ -55,9 +52,7 @@ body {
   background-color: #f5f5f5;
   display: flex;
   flex-wrap: wrap;
-  /* Hace que los elementos se envuelvan en filas en pantallas pequeñas */
   justify-content: space-between;
-  /* Distribuye los elementos horizontalmente en pantallas grandes */
 }
 
 /* Estilos para el elemento con clase .footer */
@@ -73,29 +68,22 @@ body {
   grid-template:
     "header" 100px
     "navbar" 50px
+    "sidebar" auto
     "main" auto
-    "sidebar" 100px
     "footer" 100px;
 }
 
-/* Estilos para la cuadrícula en pantallas de al menos 600px de ancho */
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template:
-      "header  header" 100px
-      "navbar  navbar" 50px
-      "sidebar main" auto
-      "footer  footer" 100px /
-      200px auto;
-  }
+/* Estilos para el cuadro de búsqueda dentro de .navbar en pantallas grandes */
+.navbar .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* Estilos para el elemento con clase .product */
 .product {
   flex: 1;
-  /* Hace que los productos ocupen igualmente el espacio disponible */
   max-width: calc(50% - 10px);
-  /* Asegura que haya un espacio de 10px entre los productos en pantallas grandes */
 }
 
 /* Estilos para el botón dentro de .product */
@@ -105,4 +93,12 @@ body {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+/* Estilos para el cuadro de búsqueda en la barra de navegación */
+.navbar .search-box input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
