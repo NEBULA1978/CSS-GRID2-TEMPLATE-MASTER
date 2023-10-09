@@ -49,11 +49,19 @@ body {
 	background-size: cover;
 	background-position: center center;
 
-	width: calc(33.33% - 20px);
+	width: calc(33.33% - 20px); 
 }
 
 .card .textos {
+	/* Si quitamos no funcionan los tetos */
 	height: 100%;
+
+	/* Para cambiar los textos de arriba a abajo */
+	display: flex;
+	/* Para iniciar los tetos en columnas */
+	flex-direction: column;
+	/* Para ver texto arriba y abajo*/
+	justify-content: space-between;
 	
 	
 }
@@ -65,8 +73,12 @@ body {
 	background-size: cover;
 	background-position: center center;
 
-	/* Arerglando espacio de las dos cajas */
+	/* Arerglando espacio de las dos cajas,
+	para ver los textos uno abajo otro y texto en centro*/
 	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .banner ul {
