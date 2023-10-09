@@ -27,12 +27,12 @@ while true; do
   echo "2. Descomentar una línea"
   echo "3. Salir"
 
-  read -p "Opción: " opcion
+  read -pr "Opción: " opcion
 
   case "$opcion" in
     1)
       # Solicita al usuario que ingrese el número de línea que desea comentar
-      read -p "Ingrese el número de línea que desea comentar: " linea
+      read -pr "Ingrese el número de línea que desea comentar: " linea
 
       # Comprueba si la entrada es un número válido
       if ! [[ "$linea" =~ ^[0-9]+$ ]]; then
@@ -53,7 +53,7 @@ while true; do
       ;;
     2)
       # Solicita al usuario que ingrese el número de línea que desea descomentar
-      read -p "Ingrese el número de línea que desea descomentar: " linea
+      read -pr "Ingrese el número de línea que desea descomentar: " linea
 
       # Comprueba si la entrada es un número válido
       if ! [[ "$linea" =~ ^[0-9]+$ ]]; then
