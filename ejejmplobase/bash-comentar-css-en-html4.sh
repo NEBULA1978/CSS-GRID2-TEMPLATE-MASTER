@@ -19,7 +19,7 @@ while true; do
     fi
   done
 
-  # Muestra las líneas con números
+  # Muestra las líneas con números del archivo seleccionado
   nl "$archivo"
 
   echo "Seleccione una acción:"
@@ -31,7 +31,6 @@ while true; do
 
   case "$opcion" in
     1)
-      nl "$archivos"
       # Solicita al usuario que ingrese el número de línea que desea comentar
       read -p "Ingrese el número de línea que desea comentar: " linea
 
