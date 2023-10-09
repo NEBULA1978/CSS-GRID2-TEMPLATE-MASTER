@@ -16,10 +16,18 @@ body {
 	margin: auto;
 	padding: 40px 0;
 
+	/* Ejejmplo 1 flex box */
 	/* Paso1: sino pongo estan las fotos una denajo de otra */
-	display: flex;
+	/* display: flex; */
 	/* Separacion entre cada elemento */
-	gap: 20px;
+	/* gap: 20px; */
+	
+	/* Ejejmplo 2 flex box */
+	display: grid;
+	/* Especificamos cuantas columnas quieresm 2 del 50%*/
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr ; */
+    gap: 20px;
 }
 
 .titulo {
@@ -28,15 +36,17 @@ body {
 }
 
 .contenedor-conciertos {
-	width: 70%;
+	
+	/* Ejejmplo 1 flex box */
+	/* width: 70%; */
 
 	/* Estaban en vertical y se ponen horizontal */
-	display: flex;
+	/* display: flex; */
 	/* Sino caben se ponen abajo */
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 
 	/* Damosesacio entre cajas */
-	gap: 20px;
+	/* gap: 20px; */
 }
 
 .card {
@@ -49,19 +59,21 @@ body {
 	background-size: cover;
 	background-position: center center;
 
-	width: calc(33.33% - 20px); 
+	/* Ejemeplo 1 flex box */
+	/* width: calc(33.33% - 20px);  */
 }
 
 .card .textos {
 	/* Si quitamos no funcionan los tetos */
 	height: 100%;
 
+	/* Ejejmplo 1 flex box */
 	/* Para cambiar los textos de arriba a abajo */
-	display: flex;
+	/* display: flex; */
 	/* Para iniciar los tetos en columnas */
-	flex-direction: column;
+	/* flex-direction: column; */
 	/* Para ver texto arriba y abajo*/
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	
 	
 }
@@ -73,13 +85,14 @@ body {
 	background-size: cover;
 	background-position: center center;
 
+	/* Ejejmplo 1 flex box */
 	/* Arerglando espacio de las dos cajas,
 	para ver los textos uno abajo otro y texto en centro*/
-	width: 30%;
+	/* width: 30%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
+} */
 
 .banner ul {
 	list-style: none;
