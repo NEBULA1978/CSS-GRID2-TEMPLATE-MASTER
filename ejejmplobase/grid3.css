@@ -1,0 +1,132 @@
+/* Importa la fuente 'Public Sans' desde Google Fonts y la aplica a todo el documento */
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+/* Estilos globales para resetear márgenes, rellenos y configuración de caja */
+* {
+  box-sizing: border-box;
+  /* Define la caja de todos los elementos como box-sizing: border-box */
+  margin: 0;
+  /* Elimina los márgenes externos */
+  padding: 0;
+  /* Elimina los rellenos */
+}
+
+/* Configuración de estilo para el elemento HTML */
+html {
+  height: 100%;
+  /* Establece la altura del elemento HTML al 100% de la ventana gráfica */
+}
+
+/* Estilos globales para el cuerpo del documento */
+body {
+  font-family: "Public Sans", sans-serif;
+  /* Aplica la fuente 'Public Sans' al cuerpo del documento */
+  font-size: 1.2rem;
+  /* Establece el tamaño de fuente base en 1.2rem */
+  min-height: 100%;
+  /* Garantiza que el cuerpo tenga al menos el 100% de la altura de la ventana gráfica */
+}
+
+/* Estilos para todos los elementos directos descendientes de .grid-container */
+.grid-container>* {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  /* Agrega una sombra de caja a los elementos */
+  border-radius: 4px;
+  /* Establece un borde redondeado en los elementos */
+  padding: 10px;
+  /* Agrega relleno de 10px a todos los elementos */
+  text-align: center;
+  /* Centra el texto en todos los elementos */
+}
+
+/* Estilos para el elemento con clase .header */
+.header {
+  grid-area: header;
+  /* Define el área de la cuadrícula a la que pertenece */
+  background-color: #85aedd;
+  /* Establece el color de fondo */
+}
+
+/* Estilos para el elemento con clase .navbar */
+.navbar {
+  grid-area: navbar;
+  /* Define el área de la cuadrícula a la que pertenece */
+  background-color: #afd6af;
+  /* Establece el color de fondo */
+}
+
+/* Estilos para el elemento con clase .sidebar */
+.sidebar {
+  grid-area: sidebar;
+  /* Define el área de la cuadrícula a la que pertenece */
+  background-color: #fdcfcf;
+  /* Establece el color de fondo */
+}
+
+/* Estilos para el elemento con clase .main */
+.main {
+  grid-area: main;
+  /* Define el área de la cuadrícula a la que pertenece */
+  background-color: #f5f5f5;
+  /* Establece el color de fondo */
+}
+
+/* Estilos para el elemento con clase .footer */
+.footer {
+  grid-area: footer;
+  /* Define el área de la cuadrícula a la que pertenece */
+  background-color: #8c96a0;
+  /* Establece el color de fondo */
+}
+
+/* Estilos para el contenedor principal con clase .grid-container */
+
+/* Estilos iniciales para la cuadrícula en pantallas más pequeñas */
+.grid-container {
+  display: grid;
+  /* Establece el elemento como una cuadrícula */
+  gap: 10px;
+  /* Define el espacio entre las celdas de la cuadrícula */
+  grid-template:
+    "header" 100px
+    "navbar" 50px
+    "main" auto
+    "sidebar" 100px
+    "footer" 100px;
+}
+/* Estilos iniciales para la cuadrícula en pantallas más pequeñas */
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header" 150px
+    /* Modifica la altura del encabezado */
+    "navbar" 50px
+    "main" 300px
+    /* Modifica la altura del área principal */
+    "sidebar" 100px
+    "footer" 100px;
+}
+
+/* Estilos para la cuadrícula en pantallas de al menos 600px de ancho */
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template:
+      "header  header" 100px
+      "navbar  navbar" 50px
+      "sidebar main" auto
+      "footer  footer" 100px /
+      200px auto;
+  }
+}
+
+/* Estilos para la cuadrícula en pantallas de al menos 900px de ancho */
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header" 100px
+      "navbar  main   sidebar" auto
+      "footer  footer footer" 100px /
+      200px auto 200px;
+  }
+}
