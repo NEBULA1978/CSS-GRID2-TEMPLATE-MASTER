@@ -49,7 +49,7 @@ body {
 	background-size: cover;
 	background-position: center center;
 
-	width: calc(33.33%- 20px);
+	width: calc(33.33% - 20px);
 }
 
 .card .textos {
