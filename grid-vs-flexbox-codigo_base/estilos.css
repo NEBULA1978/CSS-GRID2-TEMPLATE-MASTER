@@ -106,14 +106,22 @@ body {
 	list-style: none;
 
 	/* Ejejmplo 1 flex box */
+
 	/* Arerglando espacio de las dos cajas,
 	para ver los textos uno abajo otro y texto en centro*/
-	/* width: 30%;
+	/* Primer ejejmplo con ancho en flex, para utilizar en 1º ejejmplo lo quito */
+	/* width: 30%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-} */
 
+	/* O hacemos como abajo o arriba los dos vales */
+
+	/* Ejejmplo 2 grid*/
+
+	/* display: grid;
+	grid-template-rows: auto auto auto ;
+	align-items: center; */
 
 }
 
