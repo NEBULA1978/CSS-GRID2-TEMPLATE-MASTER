@@ -21,13 +21,13 @@ body {
 	/* display: flex; */
 	/* Separacion entre cada elemento */
 	/* gap: 20px; */
-	
+
 	/* Ejejmplo 2 flex box */
 	display: grid;
 	/* Especificamos cuantas columnas quieresm 2 del 50%*/
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr ; */
-    gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	/* grid-template-rows: 1fr 1fr ; */
+	gap: 20px;
 }
 
 .titulo {
@@ -36,7 +36,11 @@ body {
 }
 
 .contenedor-conciertos {
-	
+
+	list-style: none;
+	/* Elimina los puntos negros de la lista */
+
+
 	/* Ejejmplo 1 flex box */
 	/* width: 70%; */
 
@@ -74,8 +78,8 @@ body {
 	/* flex-direction: column; */
 	/* Para ver texto arriba y abajo*/
 	/* justify-content: space-between; */
-	
-	
+
+
 }
 
 .banner {
@@ -84,6 +88,8 @@ body {
 	padding: 20px;
 	background-size: cover;
 	background-position: center center;
+	/* Elimina la propiedad list-style para quitar los círculos negros */
+	list-style: none;
 
 	/* Ejejmplo 1 flex box */
 	/* Arerglando espacio de las dos cajas,
@@ -93,6 +99,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 } */
+}
 
 .banner ul {
 	list-style: none;
@@ -101,6 +108,8 @@ body {
 .banner ul li {
 	margin: 15px;
 	font-weight: bold;
+	list-style: none;
+	/* Elimina los puntos negros de la lista */
 }
 
 .banner .boton {
@@ -117,14 +126,8 @@ body {
 	cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
-	
-}
+@media screen and (max-width: 900px) {}
 
-@media screen and (max-width: 700px) {
-	
-}
+@media screen and (max-width: 700px) {}
 
-@media screen and (max-width: 600px) {
-
-}
+@media screen and (max-width: 600px) {}
