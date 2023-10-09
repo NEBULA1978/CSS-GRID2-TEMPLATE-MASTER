@@ -25,8 +25,9 @@ body {
 	/* Ejejmplo 2 flex box */
 	display: grid;
 	/* Especificamos cuantas columnas quieresm 2 del 50%*/
-	grid-template-columns: 1fr 1fr;
-	/* grid-template-rows: 1fr 1fr ; */
+	grid-template-columns: 3fr 1fr;
+	/* grid-template-columns: 1fr auto; */
+	/* separar cajas ene ellas */
 	gap: 20px;
 }
 
@@ -51,6 +52,13 @@ body {
 
 	/* Damosesacio entre cajas */
 	/* gap: 20px; */
+
+	/* Ejejmplo 2 grid */
+	display: grid;
+	/* creamos tres columnas */
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+
 }
 
 .card {
@@ -71,15 +79,21 @@ body {
 	/* Si quitamos no funcionan los tetos */
 	height: 100%;
 
-	/* Ejejmplo 1 flex box */
+	/* Ejejmplo 1 flex box ,PARA ESPACIAR ELEEMENTOS MEJOR*/
 	/* Para cambiar los textos de arriba a abajo */
-	/* display: flex; */
+	display: flex;
 	/* Para iniciar los tetos en columnas */
-	/* flex-direction: column; */
+	flex-direction: column;
 	/* Para ver texto arriba y abajo*/
-	/* justify-content: space-between; */
+	justify-content: space-between;
 
+	/* PODEMOS UTILIZAR LOS DOS ARRIBA O ABAJO */
 
+	/* Ejemplo 2 grid */
+	/* display: grid; */
+	/* quiero que halla dos filas para textos */
+	/* grid-template-rows: 1fr 1fr; */
+	/* grid-template-rows: 1fr auto; */
 }
 
 .banner {
@@ -99,6 +113,8 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 } */
+
+
 }
 
 .banner ul {
